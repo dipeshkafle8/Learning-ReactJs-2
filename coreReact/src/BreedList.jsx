@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-let localCache = {};
+let localCache = {}; //to store the breeds of previously visited animal
 export default function useBreedList(animal) {
   const [status, setStatus] = useState("unloaded");
   const [breedList, setBreedlist] = useState([]);

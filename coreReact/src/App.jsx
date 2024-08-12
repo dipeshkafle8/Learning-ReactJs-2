@@ -7,15 +7,12 @@ const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 function App() {
   console.log("Re rendering happening");
   const [location, setLocation] = useState("");
-
   const [animal, setAnimal] = useState("");
-
   const [breed, setbreed] = useState("");
   const [pets, setPets] = useState([]);
   let [breeds] = useBreedList(animal);
 
   useEffect(() => {
-    console.log("useEffect running");
     fetchData();
   }, []);
 
@@ -32,7 +29,7 @@ function App() {
       <h1>This is Dipesh Kafle</h1>
       <form
         onSubmit={(e) => {
-          e.preventDefault();
+          e.preventDefault(); //prevents form from getting submitted
           fetchData();
         }}
       >
